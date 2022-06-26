@@ -22,7 +22,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberAsyncImagePainter
 import com.example.coin_api_as.data.remote.dto.CoinDto
 import com.example.coin_api_as.model.CoinViewModel
-import com.example.coin_api_as.ui.theme.COINAPIASTheme
+
 import com.itsecurity.hwapicoin.ui.theme.HWApiCoinTheme
 import dagger.hilt.android.AndroidEntryPoint
 

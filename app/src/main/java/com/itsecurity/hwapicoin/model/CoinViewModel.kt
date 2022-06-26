@@ -4,7 +4,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.coin_api_as.data.CoinListState
+import com.itsecurity.hwapicoin.data.CoinListState
 import com.example.coin_api_as.repository.CoinRepository
 import com.example.coin_api_as.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
