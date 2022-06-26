@@ -1,7 +1,7 @@
 package com.itsecurity.hwapicoin.di
 
 import com.itsecurity.hwapicoin.data.remote.CoinApi
-import com.example.coin_api_as.repository.CoinRepository
+import com.itsecurity.hwapicoin.repository.CoinRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
