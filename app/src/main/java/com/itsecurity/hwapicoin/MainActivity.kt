@@ -23,6 +23,7 @@ import coil.compose.rememberAsyncImagePainter
 import com.example.coin_api_as.data.remote.dto.CoinDto
 import com.example.coin_api_as.model.CoinViewModel
 import com.example.coin_api_as.ui.theme.COINAPIASTheme
+import com.itsecurity.hwapicoin.ui.theme.HWApiCoinTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -30,7 +31,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            COINAPIASTheme {
+            HWApiCoinTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
