@@ -77,18 +77,18 @@ fun CoinItem(
         Text(
             text = "${coin.descripcion}",
             style = MaterialTheme.typography.h5,
-            overflow = TextOverflow.Ellipsis
+            overflow = TextOverflow.Clip
         )
 
         Row(
             modifier = Modifier.fillMaxWidth()
-                .height(30.dp).padding(2.dp),
+                .height(95.dp).padding(2.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
                 text = "${coin.valor}",
-                color = Color.Green,
-                fontStyle = FontStyle.Italic,
+                color = Color.Cyan,
+                fontStyle = FontStyle.Normal,
                 style = MaterialTheme.typography.body2,
             )
             Image(
