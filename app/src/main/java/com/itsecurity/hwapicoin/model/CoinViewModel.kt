@@ -1,4 +1,4 @@
-package com.example.coin_api_as.model
+package com.itsecurity.hwapicoin.model
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf

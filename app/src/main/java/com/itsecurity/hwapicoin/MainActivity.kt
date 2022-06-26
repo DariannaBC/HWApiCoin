@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberAsyncImagePainter
 import com.itsecurity.hwapicoin.data.remote.dto.CoinDto
-import com.example.coin_api_as.model.CoinViewModel
+import com.itsecurity.hwapicoin.model.CoinViewModel
 
 import com.itsecurity.hwapicoin.ui.theme.HWApiCoinTheme
 import dagger.hilt.android.AndroidEntryPoint
