@@ -2,7 +2,7 @@ package com.itsecurity.hwapicoin.repository
 
 import com.itsecurity.hwapicoin.data.remote.CoinApi
 import com.itsecurity.hwapicoin.data.remote.dto.CoinDto
-import com.example.coin_api_as.util.Resource
+import com.itsecurity.hwapicoin.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
