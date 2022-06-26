@@ -1,4 +1,4 @@
-package com.example.coin_api_as.data.remote.dto
+package com.itsecurity.hwapicoin.data.remote.dto
 
 data class CoinDto(
     val monedaId: Int,

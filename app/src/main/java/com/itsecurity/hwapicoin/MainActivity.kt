@@ -20,7 +20,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberAsyncImagePainter
-import com.example.coin_api_as.data.remote.dto.CoinDto
+import com.itsecurity.hwapicoin.data.remote.dto.CoinDto
 import com.example.coin_api_as.model.CoinViewModel
 
 import com.itsecurity.hwapicoin.ui.theme.HWApiCoinTheme
@@ -66,7 +66,7 @@ fun CoinListScreen(
 
 @Composable
 fun CoinItem(
-    coin:CoinDto,
+    coin: CoinDto,
     onClick : (CoinDto) -> Unit
 ) {
     Column(modifier = Modifier

@@ -1,6 +1,6 @@
 package com.itsecurity.hwapicoin.data
 
-import com.example.coin_api_as.data.remote.dto.CoinDto
+import com.itsecurity.hwapicoin.data.remote.dto.CoinDto
 
 data class CoinListState(
     val isLoading: Boolean = false,

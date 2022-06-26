@@ -1,7 +1,7 @@
 package com.example.coin_api_as.repository
 
-import com.example.coin_api_as.data.remote.CoinApi
-import com.example.coin_api_as.data.remote.dto.CoinDto
+import com.itsecurity.hwapicoin.data.remote.CoinApi
+import com.itsecurity.hwapicoin.data.remote.dto.CoinDto
 import com.example.coin_api_as.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

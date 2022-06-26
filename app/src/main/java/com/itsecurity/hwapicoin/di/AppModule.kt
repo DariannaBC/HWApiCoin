@@ -1,6 +1,6 @@
 package com.example.coin_api_as.di
 
-import com.example.coin_api_as.data.remote.CoinApi
+import com.itsecurity.hwapicoin.data.remote.CoinApi
 import com.example.coin_api_as.repository.CoinRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
