@@ -28,7 +28,7 @@ object AppModule {
     @Singleton
     fun provideCoinApi(moshi: Moshi): CoinApi {
         return Retrofit.Builder()
-            .baseUrl("http://darianna02.somee.com/Coins")
+            .baseUrl("http://darianna02.somee.com")
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
             .create(CoinApi::class.java)
