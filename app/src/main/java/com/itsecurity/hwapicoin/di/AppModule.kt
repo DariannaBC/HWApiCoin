@@ -1,4 +1,4 @@
-package com.example.coin_api_as.di
+package com.itsecurity.hwapicoin.di
 
 import com.itsecurity.hwapicoin.data.remote.CoinApi
 import com.example.coin_api_as.repository.CoinRepository
