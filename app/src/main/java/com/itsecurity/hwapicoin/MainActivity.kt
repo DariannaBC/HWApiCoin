@@ -82,7 +82,7 @@ fun CoinItem(
 
         Row(
             modifier = Modifier.fillMaxWidth()
-                .height(95.dp).padding(2.dp),
+                .height(25.dp).padding(2.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
