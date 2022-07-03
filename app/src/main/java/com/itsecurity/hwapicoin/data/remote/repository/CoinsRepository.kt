@@ -1,4 +1,4 @@
-package com.call.coinscompose.data.remote.repository
+package com.itsecurity.hwapicoin.data.remote.repository
 
 import com.call.coinscompose.data.remote.CoinsApi
 import com.itsecurity.hwapicoin.data.remote.dto.CoinsDto

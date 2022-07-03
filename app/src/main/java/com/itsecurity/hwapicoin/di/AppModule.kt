@@ -1,7 +1,7 @@
 package com.call.coinscompose.di
 
 import com.call.coinscompose.data.remote.CoinsApi
-import com.call.coinscompose.data.remote.repository.CoinsRepository
+import com.itsecurity.hwapicoin.data.remote.repository.CoinsRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module

@@ -2,7 +2,7 @@ package com.call.coinscompose.view
 
 
 import androidx.lifecycle.viewModelScope
-import com.call.coinscompose.data.remote.repository.CoinsRepository
+import com.itsecurity.hwapicoin.data.remote.repository.CoinsRepository
 import com.call.coinscompose.ui.theme.Componentes.CoinsListState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.getValue
