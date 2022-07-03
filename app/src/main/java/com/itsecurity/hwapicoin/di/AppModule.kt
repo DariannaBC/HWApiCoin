@@ -1,4 +1,4 @@
-package com.call.coinscompose.di
+package com.itsecurity.hwapicoin.di
 
 import com.itsecurity.hwapicoin.data.remote.CoinsApi
 import com.itsecurity.hwapicoin.data.remote.repository.CoinsRepository
@@ -27,7 +27,7 @@ object AppModule {
     @Singleton
     fun provideCoinsApi(moshi: Moshi): CoinsApi {
         return Retrofit.Builder()
-            .baseUrl("http://carlosapi.somee.com")
+            .baseUrl("http://darianna02.somee.com")
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
             .create(CoinsApi::class.java)
