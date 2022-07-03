@@ -32,7 +32,7 @@ fun RegistroCoinsScreen(
     var error by rememberSaveable{ mutableStateOf(false) }
 
     Scaffold(
-        topBar = { TopAppBar(title = { Text(text = "Registro de Monedas") }) }
+        topBar = { TopAppBar(title = { Text(text = "Registro de Coins") }) }
     ){it
 
 
