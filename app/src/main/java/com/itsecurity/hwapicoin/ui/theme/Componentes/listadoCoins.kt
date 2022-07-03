@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.itsecurity.hwapicoin.data.remote.dto.CoinsDto
 
-import com.call.coinscompose.view.CoinsViewModel
+import com.itsecurity.hwapicoin.view.CoinsViewModel
 
 @Composable
 fun listadoCoins(goToRegistro :() -> Unit, viewModel: CoinsViewModel = hiltViewModel()){

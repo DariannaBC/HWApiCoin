@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.call.coinscompose.view.CoinsViewModel
+import com.itsecurity.hwapicoin.view.CoinsViewModel
 
 @Composable
 fun  registroCoins(backToListado:() -> Unit, viewModel: CoinsViewModel = hiltViewModel()){
