@@ -3,26 +3,18 @@ package com.itsecurity.hwapicoin
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
-import coil.compose.rememberAsyncImagePainter
-import com.itsecurity.hwapicoin.data.remote.dto.CoinDto
-import com.itsecurity.hwapicoin.model.CoinViewModel
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 
+import com.call.coinscompose.ui.theme.Componentes.listadoCoins
+import com.call.coinscompose.ui.theme.Componentes.registroCoins
+import com.call.coinscompose.util.Screen
 import com.itsecurity.hwapicoin.ui.theme.HWApiCoinTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -31,73 +23,40 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            HWApiCoinTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    CoinListScreen()
-            }
+           myApp()
         }
     }
 }
 
 @Composable
-fun CoinListScreen(
-    viewModel: CoinViewModel = hiltViewModel()
-) {
-
-    val state = viewModel.state.value
-
-    Column(modifier = Modifier.fillMaxSize()) {
-        LazyColumn(modifier = Modifier.fillMaxSize()){
-            items( state.exchange){ exchange ->
-                CoinItem(coin = exchange, {})
-            }
-        }
-
-        if (state.isLoading)
-            CircularProgressIndicator()
-
-    }
-
-}
-
-@Composable
-fun CoinItem(
-    coin: CoinDto,
-    onClick : (CoinDto) -> Unit
-) {
-    Column(modifier = Modifier
-        .fillMaxWidth()
-        .clickable { onClick(coin) }
-        .padding(16.dp)
-    ) {
-        Text(
-            text = "${coin.descripcion}",
-            style = MaterialTheme.typography.h5,
-            overflow = TextOverflow.Clip
-        )
-
-        Row(
-            modifier = Modifier.fillMaxWidth()
-                .height(25.dp).padding(2.dp),
-            horizontalArrangement = Arrangement.SpaceBetween
+fun myApp() {
+    HWApiCoinTheme {
+        // A surface container using the 'background' color from the theme
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colors.background
         ) {
-            Text(
-                text = "${coin.valor}",
-                color = Color.Cyan,
-                fontStyle = FontStyle.Normal,
-                style = MaterialTheme.typography.body2,
-            )
-            Image(
-                painter = rememberAsyncImagePainter(coin.imageUrl),
-                contentDescription = null,
-                modifier = Modifier.size(128.dp),
-            )
-        }
+            val navHostController = rememberNavController()
+            NavHost(navController = navHostController,
+                startDestination = Screen.coinsListadoScreen.route){
 
+                composable(route  = Screen.coinsListadoScreen.route){
+                    listadoCoins(goToRegistro = {navHostController.navigate(Screen.coinsRegistroScreen.route)})
+                }
+                
+                composable(route = Screen.coinsRegistroScreen.route){
+                    registroCoins(backToListado = {navHostController.navigate(Screen.coinsListadoScreen.route)})
+                }
+
+            }
+        }
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview() {
+    HWApiCoinTheme {
+        myApp()
+    }
 }
