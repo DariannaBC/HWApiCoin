@@ -1,4 +1,4 @@
-package com.call.coinscompose.ui.theme.Componentes
+package com.itsecurity.hwapicoin.ui.theme.Componentes
 
 import com.itsecurity.hwapicoin.data.remote.dto.CoinsDto
 
