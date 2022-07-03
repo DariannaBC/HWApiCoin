@@ -1,4 +1,4 @@
-package com.call.coinscompose.util
+package com.itsecurity.hwapicoin.util
 
 sealed class Screen(val route: String) {
     object coinsRegistroScreen: Screen("coinsRegistroScreen")

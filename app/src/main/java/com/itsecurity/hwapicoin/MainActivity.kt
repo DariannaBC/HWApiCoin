@@ -14,7 +14,7 @@ import androidx.navigation.compose.rememberNavController
 
 import com.itsecurity.hwapicoin.ui.theme.Componentes.listadoCoins
 import com.itsecurity.hwapicoin.ui.theme.Componentes.registroCoins
-import com.call.coinscompose.util.Screen
+import com.itsecurity.hwapicoin.util.Screen
 import com.itsecurity.hwapicoin.ui.theme.HWApiCoinTheme
 import dagger.hilt.android.AndroidEntryPoint
 
