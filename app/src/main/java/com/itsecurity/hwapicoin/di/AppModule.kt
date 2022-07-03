@@ -1,7 +1,7 @@
 package com.itsecurity.hwapicoin.di
 
-import com.itsecurity.hwapicoin.data.remote.CoinsApi
-import com.itsecurity.hwapicoin.data.remote.repository.CoinsRepository
+import com.itsecurity.hwapicoin.data.remote.CoinApi
+import com.itsecurity.hwapicoin.repository.CoinRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -15,6 +15,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
     @Provides
     @Singleton
     fun provideMoshi(): Moshi {
@@ -25,17 +26,18 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideCoinsApi(moshi: Moshi): CoinsApi {
+    fun provideCoinApi(moshi: Moshi): CoinApi {
         return Retrofit.Builder()
             .baseUrl("http://darianna02.somee.com")
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
-            .create(CoinsApi::class.java)
+            .create(CoinApi::class.java)
     }
 
     @Provides
     @Singleton
-    fun provideCoinsRepository(coinsApi: CoinsApi): CoinsRepository {
-        return CoinsRepository(coinsApi)
+    fun provideCoinRepository(coinApi: CoinApi): CoinRepository {
+        return CoinRepository(coinApi)
     }
 }
+
