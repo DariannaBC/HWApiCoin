@@ -1,4 +1,4 @@
-package com.call.coinscompose.ui.theme.Componentes
+package com.itsecurity.hwapicoin.ui.theme.Componentes
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
