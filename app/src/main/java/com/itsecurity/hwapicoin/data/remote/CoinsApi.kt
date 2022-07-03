@@ -1,4 +1,4 @@
-package com.call.coinscompose.data.remote
+package com.itsecurity.hwapicoin.data.remote
 
 import com.itsecurity.hwapicoin.data.remote.dto.CoinsDto
 import retrofit2.http.Body

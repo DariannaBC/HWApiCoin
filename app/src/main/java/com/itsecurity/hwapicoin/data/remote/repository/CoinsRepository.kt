@@ -1,6 +1,6 @@
 package com.itsecurity.hwapicoin.data.remote.repository
 
-import com.call.coinscompose.data.remote.CoinsApi
+import com.itsecurity.hwapicoin.data.remote.CoinsApi
 import com.itsecurity.hwapicoin.data.remote.dto.CoinsDto
 import com.call.coinscompose.util.Resource
 import kotlinx.coroutines.flow.Flow
